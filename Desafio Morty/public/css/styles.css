@@ -7,11 +7,26 @@ body{
     background-position: center;
     background-size: cover;
 }
-
-.botao{
-    background-image: url(./images/button.png);
-   
-
+.cabeca{
+    display: flex;
+    box-sizing: border-box;
+    width: 400px;
+    height: 70px;
+    image-resolution: inherit;
+    align-items: center;
+    position: relative;
+    z-index: 1000;   
+    margin: auto;
+    background-color: aqua;
+}
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-variant-alternates: historical-forms;
+    color: red;
+}
+.logo{
+    width: 105px;
+    height: 105px;
 }
 
 body {
@@ -68,7 +83,7 @@ div {
     color: #fff;
     letter-spacing: 0.015rem;
     line-height: 1.3125rem;
-    background: #00B4A0;
+    background:red;
     border-radius: 1.25rem;
     border-bottom-right-radius: 0;
     text-align: left;
@@ -114,21 +129,16 @@ div {
     letter-spacing: 0.015rem;
     line-height: 1.3125rem;
 }
-.botao{
-    background-image: url(./download.jpg) no-repeat;
-    width: 100px;
-    height: 100px;
-    border: blueviolet;
-}
+
 .from-watson p {
     margin: 0.3125rem;
     padding: 0 1.25rem;
-    background-color: rgb(red, green, blue);
+    background-color: rgba(0, 255, 255, 0.486);
 }
 
 .from-watson p:before {
     content: "";
-    background: rgb(190, 9, 9);
+    background: red;
     border-radius: 5px;
     position: absolute;
     z-index: 2;

@@ -1,6 +1,7 @@
 const AssistantV1 = require('watson-developer-cloud/assistant/v1');
 const express = require('express');
 const bodyParser = require('body-parser');
+require('dotenv').config();
 
 const app = express();
 
@@ -8,10 +9,9 @@ app.use(bodyParser.json());
 app.use(express.static('./public'));
 
 const port = 3000;
-require('dotenv').config();
 const assistant = new AssistantV1({
-  username:'5b9b7050-6838-4e96-b5a7-33acb4b3169a',
-  password: 'IkuUSJkDyZYX',
+  username:process.env.Assis_username,
+  password: process.env.Assis_password,
   url: 'https://gateway.watsonplatform.net/assistant/api/',
   version: '2018-02-16',
 });''
@@ -21,7 +21,7 @@ app.post('/conversation/', (req, res) => {
 
   const params = {
     input: { text },
-    workspace_id:'28a417e4-8f70-411f-bdc5-a954dfa8e381',
+    workspace_id:process.env.workspace_id,
     context,
   };
 
